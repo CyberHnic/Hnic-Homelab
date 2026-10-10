@@ -34,7 +34,7 @@ The portfolio write-ups explain the problem, implementation, validation and less
 
 ## About me
 
-I bring a mechanical and technical background, experience with SAP/ERP and a practical approach to solving problems. Outside IT, I coach junior football with SFV D-Diplom and Jugend+Sport qualifications.
+I bring a mechanical and technical background, experience with SAP/ERP and a practical approach to solving problems. Outside IT, I coach junior football with SFV D/C-Diplom and Jugend+Sport qualifications.
 
 **Languages:** English, German and Swiss German.
 
