@@ -1,6 +1,6 @@
 # HNIC Homelab
 
-**A practical portfolio of networking, system administration and troubleshooting by Fortune Kuzwayo / CyberHnic.**
+**A practical portfolio of networking, system administration and troubleshooting.
 
 I built this lab to practise the work behind reliable IT services: segmentation, VPN routing, remote access, storage, automated backups and monitoring. The most valuable projects include diagnosing faults and checking the result after a reboot.
 
