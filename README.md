@@ -1,62 +1,43 @@
-# HNIC Homelab
+# Fortune Kuzwayo | CyberHnic
 
-**A practical portfolio of networking, system administration and troubleshooting.
+### Networking • Linux • IT Support • Cybersecurity
 
-I built this lab to practise the work behind reliable IT services: segmentation, VPN routing, remote access, storage, automated backups and monitoring. The most valuable projects include diagnosing faults and checking the result after a reboot.
+I’m based in Switzerland and transitioning into IT, networking and cybersecurity. My homelab is where I turn study into practical work: building networks, diagnosing faults, automating backups and verifying that services recover after changes.
 
-## Architecture
+## My flagship project: HNIC Homelab
 
-```mermaid
-flowchart TD
-    Internet["Internet"] --> ISP["ISP router"]
-    ISP --> Firewall["OPNsense"]
-    Firewall --> VPN["ProtonVPN egress"]
-    Phone["Phone / WireGuard"] --> Firewall
-    Firewall --> Switch["Managed switch"]
-    Switch --> LAN["LAN: administration and services"]
-    Switch --> AP["Wireless access point"]
-    AP --> Guest["VLAN 20: Guest"]
-    AP --> Lab["VLAN 30: Lab"]
-    LAN --> Storage["Debian NAS and backups"]
-    LAN --> Monitor["Raspberry Pi monitoring"]
-    LAN --> Hosts["Proxmox and workstation VMs"]
-```
+An evolving environment built with OPNsense, managed switching, wireless VLANs, Debian storage, Raspberry Pi monitoring, Proxmox and Windows/Linux virtual machines.
 
-Conceptual topology: VPN routing is policy based; this diagram does not assert that every device uses the tunnel. Physical uplinks and current firewall rules should be checked against the live configuration.
-
-## Project case studies
-
-| Project | Outcome | Documentation |
+| Project | Work completed | Skills demonstrated |
 | --- | --- | --- |
-| OPNsense and VLANs | Built separate LAN, Guest and Lab networks and resolved connectivity problems | [Network segmentation](docs/network-segmentation.md) |
-| ProtonVPN routing recovery | Restored VPN egress and verified persistence after reboot | [Routing incident](docs/protonvpn-routing.md) |
-| WireGuard | Established phone connectivity to home services | [Remote access](docs/wireguard.md) |
-| NAS and backups | Deployed SMB storage and a daily rsync backup timer | [Storage operations](docs/storage-backups.md) |
-| Monitoring | Deployed service checks and repaired SMART monitoring permissions | [Monitoring](docs/monitoring.md) |
-| VM integration | Established SSH, DNS and shared-storage access for Windows and Ubuntu | [VM integration](docs/vm-integration.md) |
+| Network segmentation | LAN, Guest and Lab VLAN configuration and connectivity troubleshooting | Switching, addressing, firewall rules, DNS |
+| ProtonVPN routing | Restored policy routing and checked VPN egress after a reboot | Routing, NAT, packet inspection, fault diagnosis |
+| Remote access | WireGuard phone connectivity and access to home services | VPN configuration and connectivity validation |
+| Storage and backups | Debian SMB storage with scheduled rsync backups | Linux administration, permissions, systemd |
+| Monitoring | Uptime Kuma, Monit and SMART checks | Service monitoring and troubleshooting |
+| VM integration | Windows and Ubuntu SSH, local DNS and shared storage | Cross-platform administration |
 
-## Evidence and scope
+The portfolio write-ups explain the problem, implementation, validation and lessons learned. I’m building the documentation alongside the lab.
 
-These case studies summarize results recorded during my lab work in August–October 2026. Raw command output and screenshots are not included in this initial release. Historical checks demonstrate the state at the time of testing; they do not establish current service health.
+## Tools I use
 
-The documents distinguish completed checks from validation still to collect. Exact deployed scripts and firewall exports are not included. Reproduction requires adapting settings to the target environment.
+**Networking:** OPNsense, VLANs, WireGuard, managed switches, tcpdump, Nmap, dig, traceroute  
+**Systems:** Debian, Ubuntu, Windows, Raspberry Pi, Proxmox, Parallels  
+**Operations:** Docker Compose, Uptime Kuma, Monit, SMART, rsync, systemd, SSH, SMB
 
-## Hardware and software
+## Learning and next steps
 
-- OPNsense firewall, Zyxel managed switch and TP-Link Omada access point.
-- Intel NUC running Debian, with external storage and a separate backup drive.
-- Raspberry Pi running Debian and Uptime Kuma in Docker.
-- Proxmox host and a Mac workstation with Parallels Windows/Linux VMs.
-- OPNsense VPN routing, WireGuard, Monit, SMART, rsync, systemd, SSH and SMB.
+- Completed Google IT Support coursework.
+- Studying for CCNA through structured review and practical networking labs.
+- Developing Linux, Windows and security troubleshooting skills.
+- Improving project documentation and collecting reproducible validation evidence.
 
-## Documentation roadmap
+## About me
 
-- Capture sanitized configuration examples and dated command output.
-- Verify backup restoration into a temporary directory.
-- Document Guest-to-LAN isolation with explicit allowed and denied tests.
-- Record a controlled VPN outage test for the kill switch.
-- Add Grafana dashboard documentation after checking queries and alert behavior.
+I bring a mechanical and technical background, experience with SAP/ERP and a practical approach to solving problems. Outside IT, I coach junior football with SFV D-Diplom and Jugend+Sport qualifications.
 
-## Public repository hygiene
+**Languages:** English, German and Swiss German.
 
-Examples omit public endpoints, device identifiers, account passwords, API tokens and VPN private keys. Review screenshots, exports and Git history before publishing. Use placeholders for environment-specific settings.
+---
+
+This portfolio reflects hands-on learning. Certifications in progress are described as study goals.
