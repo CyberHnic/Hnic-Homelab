@@ -1,4 +1,4 @@
-# HNIC Homelab | Monitoring, Alerting & Backup Observability
+# projects/monitoring/README.md
 
 > **Practical Linux, networking and cybersecurity project** — Debian 13, Proxmox VE, Prometheus, Grafana, Raspberry Pi, Uptime Kuma, SMART monitoring, systemd and rsync.
 
